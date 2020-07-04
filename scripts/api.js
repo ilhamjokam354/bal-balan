@@ -32,18 +32,10 @@ const getTeam = ()=>{
             }
             })
         }
-        fetch(`${base_uri}/teams`, {
-            method : "GET",
-            headers : {
-                "X-Auth-Token" : api_key
-            }
-        })
-        .then(response => {
-            return response.json()
-        })
-        .then(responseWithJson => {
+        fetchAPI(`${base_uri}/teams`)
+        .then(responsewithJson => {
             let articlesTeam = "";
-                responseWithJson.teams.forEach(function(team) {
+                responsewithJson.teams.forEach(function(team) {
                     articlesTeam += `
                     <div class="card">
                         <div class="card-image">
@@ -61,10 +53,10 @@ const getTeam = ()=>{
                         `;
                     }); 
                    
-                    // Sisipkan komponen card ke dalam elemen dengan id #team
+                // Sisipkan komponen card ke dalam elemen dengan id #team
                 const team = document.querySelector("#team")
                 team.innerHTML = articlesTeam;
-        })       
+        })
   }
 
 

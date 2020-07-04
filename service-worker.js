@@ -24,8 +24,11 @@ if (workbox){
       { url: './scripts/generate.js', revision: '1' },
       { url: './scripts/idb.js', revision: '1' },
       { url: './scripts/indexDb.js', revision: '1' },
-      { url: './scripts/nav.js', revision: '1' },
-      ]);
+      { url: './scripts/nav.js', revision: '1' }],
+      {
+        // Ignore all URL parameters.
+        ignoreURLParametersMatching: [/.*/]
+      });
 
   workbox.routing.registerRoute(
       /.*(?:png|gif|jpg|jpeg|svg|ico)$/,
@@ -108,7 +111,7 @@ self.addEventListener('push', function(event) {
 
 
 
-
+// Maaf Gak saya hapus buat Belajar
 // const CACHE_NAME = "bal-balan";
 // let urlsToCache = [
 //   "./",
