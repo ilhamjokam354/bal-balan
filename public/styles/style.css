@@ -25,3 +25,7 @@
     text-align: justify;
     padding: 3px;
 }
+.img-resize {
+    width: auto;
+    height: 300px;
+  }

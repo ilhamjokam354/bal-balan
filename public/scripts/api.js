@@ -11,7 +11,7 @@ const getTeam = ()=>{
                     articlesTeam += `
                     <div class="card">
                         <div class="card-image">
-                            <img src="${team.crestUrl ? team.crestUrl : "./images/404.jpg"}" height="200px" alt="Logo ${team.name}" width="300px">
+                            <img src="${team.crestUrl ? team.crestUrl : "./images/404.jpg"}" class="img-resize" alt="Logo ${team.name}" >
                         
                         </div>
                         <div class="card-content">
@@ -39,7 +39,7 @@ const getTeam = ()=>{
                     articlesTeam += `
                     <div class="card">
                         <div class="card-image">
-                            <img  src="${team.crestUrl ? team.crestUrl : "./images/404.jpg"}" alt="Logo ${team.name}" height="200px" width="300px">
+                            <img  src="${team.crestUrl ? team.crestUrl : "./images/404.jpg"}" alt="Logo ${team.name}" class="img-resize">
                         
                         </div>
                         <div class="card-content">
